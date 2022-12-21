@@ -19,6 +19,7 @@ h1 {
 
 main {
     background-color: #FAAA32;
+    width: 100%;
 }
 
 .imagen_principal {
@@ -72,6 +73,10 @@ i {
     justify-content: center;
 }
 
+.galeria img{
+    width: 90%;
+}
+
 .fundador {
     display: flex;
     flex-direction: column;
@@ -98,7 +103,22 @@ i {
     animation-delay: 3s;
 }
 
+#grilla{
+    display:grid;
 
+    grid-template-areas:    "encabezado"
+                            "contenido_principal"
+                            "pie_de_pagina";
+}
+header{
+    grid-area: encabezado;
+}
+main{
+    grid-area: contenido_principal;
+}
+footer{
+    grid-area: pie_de_pagina;
+}
 
 @keyframes aparecer {
     0% {
@@ -106,5 +126,19 @@ i {
     }
     100% {
         opacity: 1;
+    }
+}
+
+/*Empieza el formato tablet*/
+@media screen and (min-width: 480px) {
+    .galeria img{
+        width: 50%;
+    }
+}
+
+/*Empieza la reestructuracion de contenido para desktop (computadora)*/
+@media screen and (min-width: 1024px) {
+    .galeria img{
+        width: 30%;
     }
 }
