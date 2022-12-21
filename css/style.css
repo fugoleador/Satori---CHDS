@@ -29,6 +29,7 @@ main {
 
 .imagen_principal img {
     border-radius: 40px;
+    width: 100%;
 }
 
 footer {
@@ -134,11 +135,17 @@ footer{
     .galeria img{
         width: 50%;
     }
+    .imagen_principal{
+        width: 100%
+    }
 }
 
 /*Empieza la reestructuracion de contenido para desktop (computadora)*/
 @media screen and (min-width: 1024px) {
     .galeria img{
         width: 30%;
+    }
+    .imagen_principal{
+        width: 100%
     }
 }
